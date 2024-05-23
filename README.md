@@ -17,11 +17,22 @@ webopen -link link_name
 ```
 <link_name>:The name or identifier of the link you want to open.
 
+```bash
+webopen add
+```
+Prompts user to store credentials.
+
+```bash
+webopen search
+```
+Prompts user to search website credentials in database.
+
 ## Example
 
 ```bash
 webopen -link github.com
 ```
+
 
 
 ## Contributing
