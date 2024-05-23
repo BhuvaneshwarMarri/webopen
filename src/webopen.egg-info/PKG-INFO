@@ -14,8 +14,8 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
-Requires-Dist: argparse==1.4
-Requires-Dist: click==8.0.3
+Requires-Dist: argparse
+Requires-Dist: click
 
 # WebOpen
 

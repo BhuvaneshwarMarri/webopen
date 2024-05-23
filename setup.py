@@ -24,8 +24,8 @@ setup(
     keywords=["add", "search"],
     python_requires=">=3.8",
     install_requires=[
-        "argparse==1.4",
-        "click==8.0.3",
+        "argparse",
+        "click",
     ],
     entry_points={
         'console_scripts': [
