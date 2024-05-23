@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.py
+src/webopen/__init__.py
+src/webopen/main.py
+src/webopen.egg-info/PKG-INFO
+src/webopen.egg-info/SOURCES.txt
+src/webopen.egg-info/dependency_links.txt
+src/webopen.egg-info/entry_points.txt
+src/webopen.egg-info/requires.txt
+src/webopen.egg-info/top_level.txt
+src/webopen/db/__init__.py
+src/webopen/db/config.py
+src/webopen/db/connection.py
+src/webopen/db/models.py

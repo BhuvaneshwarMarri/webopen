@@ -1,0 +1,2 @@
+[console_scripts]
+webopen = webopen.main:main

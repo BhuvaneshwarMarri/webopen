@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: webopen
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/BhuvaneshwarMarri/webopen
+Author: Bhuvaneshwar_Marri
+Author-email: bhuvaneshwarmarri@gmail.com
+Project-URL: Homepage, https://github.com/BhuvaneshwarMarri/webopen
+Project-URL: Issues, https://github.com/BhuvaneshwarMarri/webopen/issues
+Keywords: add,search
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: argparse==1.4
+Requires-Dist: click==8.0.3
+
+# WebOpen
+
+WebOpen is a python command to open urls through command line.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install webopen.
+
+```bash
+pip install webopen
+```
+
+## Usage
+
+```bash
+webopen -link link_name
+```
+<link_name>:The name or identifier of the link you want to open.
+
+## Example
+
+```bash
+webopen -link github.com
+```
+
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
