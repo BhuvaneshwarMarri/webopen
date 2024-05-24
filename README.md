@@ -27,6 +27,11 @@ webopen search
 ```
 This command prompts user for a website, if the website is in database, it prints out the credentials used in the website.
 
+```bash
+webopen delete
+```
+This command prompts user for a website, if the website is in database, it delete's the credentials used in the website.
+
 ## Example
 
 ```bash
