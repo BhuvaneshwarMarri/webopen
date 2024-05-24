@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='webopen',
-    version='0.0.1',
+    version='0.0.2',
     author='Bhuvaneshwar_Marri',
     author_email='bhuvaneshwarmarri@gmail.com',
     description='A small example package',
@@ -21,7 +21,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    keywords=["add", "search"],
+    keywords=["add", "search","delete"],
     python_requires=">=3.8",
     install_requires=[
         "argparse",

@@ -1,13 +1,13 @@
 Metadata-Version: 2.1
 Name: webopen
-Version: 0.0.1
+Version: 0.0.2
 Summary: A small example package
 Home-page: https://github.com/BhuvaneshwarMarri/webopen
 Author: Bhuvaneshwar_Marri
 Author-email: bhuvaneshwarmarri@gmail.com
 Project-URL: Homepage, https://github.com/BhuvaneshwarMarri/webopen
 Project-URL: Issues, https://github.com/BhuvaneshwarMarri/webopen/issues
-Keywords: add,search
+Keywords: add,search,delete
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent

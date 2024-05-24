@@ -32,13 +32,36 @@ def search_data(website):
             labels = ["Website", "Username", "Password"]
             for i in range(3):
                 click.echo(f"{labels[i]} : {data[i]}")
+            return True
         else:
             click.echo("No data found for the specified website.")
+            return False
 
 def credential_search():
     website = click.prompt("Enter website name to search")
     search_data(website)
 
+def delete_data(website):
+    create_tables()
+    with get_db() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''
+        DELETE FROM creds
+        WHERE website=?
+        ''', (website,))
+        conn.commit()
+        click.echo("Data deleted successfully")
+
+def credential_delete():
+    website = click.prompt("Enter website name to delete")
+    x=search_data(website)
+    if x:
+        choice = click.prompt("Enter yes to delete this credential else type no")
+        if choice == "yes":
+            delete_data(website)
+        else:
+            click.echo("Successfully exited from delete process")
+    
 def open_link(website):
     webbrowser.open(f"http://{website}")
         
@@ -50,6 +73,7 @@ def main():
     parser.add_argument("-link", dest="link_name", help="The name of the link to open")
     subparsers.add_parser("add", help="Add a new credential")
     subparsers.add_parser("search", help="Search for a credential")
+    subparsers.add_parser("delete",help="Delete a particular credential")
     args = parser.parse_args()
     
     if args.link_name:
@@ -58,6 +82,8 @@ def main():
         credential_add()
     elif args.command == "search":
         credential_search()
+    elif args.command == "delete":
+        credential_delete()
     else:
         parser.print_help()
 
