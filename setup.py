@@ -2,10 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name='webopen',
-    version='0.0.2',
+    version='1.0.0',
     author='Bhuvaneshwar_Marri',
     author_email='bhuvaneshwarmarri@gmail.com',
-    description='A small example package',
+    description='A package helps to open browser via CLI and used to store and manage your passwords.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/BhuvaneshwarMarri/webopen',

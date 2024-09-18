@@ -3,6 +3,17 @@ import argparse
 from webopen.db.connection import get_db
 from webopen.db.models import create_tables
 import click
+from datetime import datetime
+from authentication import verify_user
+import random
+import string
+import pyperclip
+
+def gen_password(length=16):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = "".join(random.choice(characters) for i in range(length))
+    pyperclip.copy(password)
+    print("Password is successfully generated and copied to your clip board, Use ctrl+V or Win+V to verify")
 
 def add_data(website, username, password):
     with get_db() as conn:
@@ -74,18 +85,22 @@ def main():
     subparsers.add_parser("add", help="Add a new credential")
     subparsers.add_parser("search", help="Search for a credential")
     subparsers.add_parser("delete",help="Delete a particular credential")
+    subparsers.add_parser("generate",help="Help to generate password directly copied to your clip board")
     args = parser.parse_args()
     
     if args.link_name:
         open_link(args.link_name)
-    elif args.command == "add":
-        credential_add()
-    elif args.command == "search":
-        credential_search()
-    elif args.command == "delete":
-        credential_delete()
-    else:
-        parser.print_help()
+    elif verify_user():
+        if args.command == "add":
+            credential_add()
+        elif args.command == "search":
+            credential_search()
+        elif args.command == "delete":
+            credential_delete()
+        elif args.command == "generate":
+            gen_password()
+        else:
+            parser.print_help()
 
 if __name__ == "__main__":
     create_tables()
